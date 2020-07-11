@@ -1,0 +1,25 @@
+-- Streaming data is stoed in cassandradb because :
+-- 1. It has low latency write
+-- 2. Streaming output can be analyses/visualised from the database even after the streaming application crashes
+
+-- Table to store audit data for fraud logs
+CREATE TABLE FRAUD_LOGS(
+INSERT_DTTM TIMESTAMP,
+BATCH_SIZE INT,
+FRAUD_IP inet,
+ATTEMPTS INT,
+PRIMARY KEY(INSERT_DTTM));
+
+-- Table to store audit data for error logs
+CREATE TABLE ERROR_LOGS(
+INSERT_DTTM TIMESTAMP,
+BATCH_SIZE INT,
+HTTP_CODE SMALLINT,
+REQ_COUNT INT,
+PRIMARY KEY (INSERT_DTTM) );
+
+-- Table to store audit data for popularity logs
+CREATE TABLE POPULARITY_LOGS(
+INSERT_DTTM TIMESTAMP,
+POPULARITY_MAP MAP<TEXT, INT>,
+PRIMARY KEY (INSERT_DTTM));

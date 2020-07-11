@@ -1,0 +1,42 @@
+USE labuser_database;
+
+DROP TABLE IF EXISTS COMMUNITY_DROPOFF_DAILY_SUMMARY;
+DROP TABLE IF EXISTS COMMUNITY_PICKUP_DAILY_SUMMARY;
+DROP TABLE IF EXISTS COMPANY_YEARLY_SUMMARY;
+
+-- COMMUNITY_DROPOFF_DAILY_SUMMARY table creation
+CREATE TABLE COMMUNITY_DROPOFF_DAILY_SUMMARY(
+dropoff_community SMALLINT,
+daily_trip_count MEDIUMINT NOT NULL,
+daily_total_fare DOUBLE NOT NULL,
+daily_total_distance DOUBLE NOT NULL,
+daily_avg_fare FLOAT NOT NULL,
+daily_avg_distance FLOAT NOT NULL,
+daily_avg_duration FLOAT NOT NULL,
+CONSTRAINT PK_COMMUNITY_DROPOFF_DAILY_SUMMARY PRIMARY KEY (dropoff_community));
+
+-- COMMUNITY_DROPOFF_DAILY_SUMMARY table creation
+CREATE TABLE COMMUNITY_PICKUP_DAILY_SUMMARY(
+pickup_community SMALLINT,
+daily_trip_count MEDIUMINT NOT NULL,
+daily_total_fare DOUBLE NOT NULL,
+daily_total_distance DOUBLE NOT NULL,
+daily_avg_fare FLOAT NOT NULL,
+daily_avg_distance FLOAT NOT NULL,
+daily_avg_duration FLOAT NOT NULL,
+CONSTRAINT PK_COMMUNITY_PICKUP_DAILY_SUMMARY PRIMARY KEY (pickup_community));
+
+-- COMPANY YEARLY SUMMARY table creation
+CREATE TABLE COMPANY_YEARLY_SUMMARY (
+company VARCHAR(50),
+year SMALLINT NOT NULL,
+daily_trip_count INTEGER NOT NULL,
+daily_total_fare DOUBLE NOT NULL,
+daily_total_distance DOUBLE NOT NULL,
+daily_total_duration DOUBLE NOT NULL,
+daily_average_amount DOUBLE NOT NULL,
+daily_average_distance DOUBLE NOT NULL,
+daily_average_duration DOUBLE NOT NULL,
+CONSTRAINT PK_COMPANY_YEARLY_SUMMARY PRIMARY KEY (company));
+
+COMMIT;
