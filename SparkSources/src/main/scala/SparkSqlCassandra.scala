@@ -4,7 +4,7 @@
 
   spark2-submit --class SparkSqlCassandra \
   --jars $SPARK_HOME/jars/spark-cassandra-connector_2.11-2.0.12.jar,$SPARK_HOME/jars/jsr166e-1.1.0.jar \
-  --conf spark.cassandra.auth.username=edureka_735821 --conf spark.cassandra.auth.password=edureka_735821iyktd \
+  --conf spark.cassandra.auth.username=... --conf spark.cassandra.auth.password=... \
    target/scala-2.11/spark_sources_2.11-0.1.jar station/ demo_keyspace station
 
    Output table cannot be create on fly. It must be present and there must be exact mapping between fields of dataframe and table
