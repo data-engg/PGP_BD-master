@@ -1,3 +1,11 @@
+/*
+spark2-submit --class batch.VideoPlayCSVBatch \
+--packages com.datastax.spark:spark-cassandra-connector_2.11:2.0.12 \
+--conf spark.cassandra.auth.username=... \
+--conf spark.cassandra.auth.password=... \
+target/scala-2.11/mid-project-2_2.11-0.1.jar VideoPlayLake/Inbound/csv videos.video_play_stg
+ */
+
 package batch
 import utilities._
 
