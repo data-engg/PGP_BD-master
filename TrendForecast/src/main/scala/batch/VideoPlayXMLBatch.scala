@@ -1,8 +1,8 @@
 /*
 spark2-submit --class batch.VideoPlayXMLBatch \
 --packages com.datastax.spark:spark-cassandra-connector_2.11:2.0.12 \
---conf spark.cassandra.auth.username=edureka_735821 \
---conf spark.cassandra.auth.password=edureka_735821iyktd \
+--conf spark.cassandra.auth.username=... \
+--conf spark.cassandra.auth.password=... \
  target/scala-2.11/mid-project-2_2.11-0.1.jar VideoPlayLake/Inbound/xml videos.video_play_stg
  */
 
