@@ -47,7 +47,7 @@
             <name>Sample 20% records from dataset</name>
               <class>batch.SampleFields</class>
             <jar>mid-project-2_2.11-0.1.jar</jar>
-              <arg>/bigdatapgp/common_folder/midproject2/datasets/video_plays.csv </arg>
+              <arg>/bigdatapgp/common_folder/midproject2/datasets/video_plays.csv</arg>
               <arg>/user/edureka_735821/VideoPlayLake/Inbound/</arg>
               <arg>csv</arg>
             <file>/user/edureka_735821/TrendForecast/target/scala-2.11/mid-project-2_2.11-0.1.jar#mid-project-2_2.11-0.1.jar</file>
@@ -75,7 +75,7 @@
             <name>XML batch processing for enrichment</name>
               <class>batch.VideoPlayXMLBatch</class>
             <jar>mid-project-2_2.11-0.1.jar</jar>
-              <spark-opts>--packages com.datastax.spark:spark-cassandra-connector_2.11:2.0.12 --conf spark.cassandra.auth.username=edureka_735821 --conf spark.cassandra.auth.password=edureka_735821iyktd</spark-opts>
+              <spark-opts>--packages com.datastax.spark:spark-cassandra-connector_2.11:2.0.12 --conf spark.cassandra.auth.username=... --conf spark.cassandra.auth.password=...</spark-opts>
               <arg>VideoPlayLake/Inbound/xml</arg>
               <arg>videos.video_play_stg</arg>
             <file>/user/edureka_735821/TrendForecast/target/scala-2.11/mid-project-2_2.11-0.1.jar#mid-project-2_2.11-0.1.jar</file>
@@ -98,7 +98,7 @@
             <name>CSV batch processing for enrichment</name>
               <class>batch.VideoPlayCSVBatch</class>
             <jar>mid-project-2_2.11-0.1.jar</jar>
-              <spark-opts>--packages com.datastax.spark:spark-cassandra-connector_2.11:2.0.12 --conf spark.cassandra.auth.username=edureka_735821 --conf spark.cassandra.auth.password=edureka_735821iyktd</spark-opts>
+              <spark-opts>--packages com.datastax.spark:spark-cassandra-connector_2.11:2.0.12 --conf spark.cassandra.auth.username=... --conf spark.cassandra.auth.password=...</spark-opts>
               <arg>VideoPlayLake/Inbound/csv</arg>
               <arg>videos.video_play_stg</arg>
             <file>/user/edureka_735821/TrendForecast/target/scala-2.11/mid-project-2_2.11-0.1.jar#mid-project-2_2.11-0.1.jar</file>
@@ -131,7 +131,7 @@
             <name>Analysis for Video Plays table(hive)</name>
               <class>batch.VideoPlayAnalysis</class>
             <jar>mid-project-2_2.11-0.1.jar</jar>
-              <spark-opts>--packages com.datastax.spark:spark-cassandra-connector_2.11:2.0.12  --conf spark.cassandra.auth.username=edureka_735821 --conf spark.cassandra.auth.password=edureka_735821iyktd</spark-opts>
+              <spark-opts>--packages com.datastax.spark:spark-cassandra-connector_2.11:2.0.12  --conf spark.cassandra.auth.username=... --conf spark.cassandra.auth.password=.....</spark-opts>
               <arg>videos.video_play</arg>
             <file>/user/edureka_735821/TrendForecast/target/scala-2.11/mid-project-2_2.11-0.1.jar#mid-project-2_2.11-0.1.jar</file>
         </spark>
